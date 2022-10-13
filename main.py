@@ -153,13 +153,13 @@ Created on Mon Apr 11 14:07:19 2022
             scores.append(healthcare)
 
 
-    summary = pd.DataFrame(scores,index=terms.keys(),columns=['score']).sort_values(by='score',ascending=False)            # Create a data frame with scores
+    summary = pd.DataFrame(scores,index=terms.keys(),columns=['score']).sort_values(by='score',ascending=False)            # Creates a data frame with scores
     summary
 
 
     pie = plt.figure(figsize=(11,11))
     plt.pie(summary['score'], labels=summary.index, explode = None, autopct='%1.0f%%',shadow=True,startangle=90)
-    plt.title('Job Recommendation\n\n')                                                                                        # Create pie chart
+    plt.title('Job Recommendation\n\n')                                                                                        # Creates a pie chart
     plt.axis('equal')
     plt.show()
 
